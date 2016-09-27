@@ -29,8 +29,8 @@ class Dice(object):
             self._rolls[i] = choice(self._sides)
         
     def sum(self):
-        _sum = sum(self._rolls) + self._bonus
-        self.sum = _sum if _sum > 1 else 1
+        _sum         = sum(self._rolls) + self._bonus
+        self.total   = _sum if _sum > 1 else 1
         self.average = sum(self._rolls)/float(self._nr)
 
 
@@ -56,6 +56,6 @@ def roll(dice):
         SIDES = die
     d_roll = ThisDie(num, bonus)
 
-    print d_roll.sum
+    print d_roll.total
 
 roll('2d12-20')
