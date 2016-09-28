@@ -45,7 +45,7 @@ class d20(Dice):  SIDES = 20
 class d100(Dice): SIDES = 100
 
 def roll(dice):
-    d     = re.match(dice_pattern, dice)
+    d     = re.search(dice_pattern, dice)
     die   = int(d.group('die'))
     num   = int(d.group('numdice'))
     bonus = int(d.group('bonus'))
@@ -58,4 +58,4 @@ def roll(dice):
 
     print d_roll.total
 
-roll('2d12-20')
+roll('1d6+2')
